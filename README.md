@@ -31,8 +31,4 @@ Copy `custom_components/ngbs_icon` into Home Assistant's `custom_components` dir
 
 ## Development status
 
-This is an early `0.1.0` release. Test control operations carefully. The protocol implementation is based on the local NGBS service behavior and the open-source `ngbs-icon` project.
-
-## Repository setup
-
-Replace `OWNER` in `custom_components/ngbs_icon/manifest.json` with your GitHub username before publishing.
+This is an early `0.1.1` release. Test control operations carefully. The protocol implementation is based on the local NGBS service behavior and the open-source `ngbs-icon` project.
