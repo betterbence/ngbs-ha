@@ -20,7 +20,11 @@ PRESET_ECO = "eco"
 
 
 def _enabled_thermostats(data: dict[str, Any]) -> list[str]:
-    return [str(key) for key, value in (data.get("DP") or {}).items() if value.get("ON") == 1]
+    return [
+        str(key)
+        for key, value in (data.get("DP") or {}).items()
+        if value.get("ON") == 1 and value.get("LIVE") == 1
+    ]
 
 
 async def async_setup_entry(

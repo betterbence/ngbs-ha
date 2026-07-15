@@ -15,7 +15,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, async_add_e
     coordinator: NgbsCoordinator = entry.runtime_data
     entities: list[SwitchEntity] = [NgbsGlobalEcoSwitch(coordinator)]
     for th_id, th in (coordinator.data.get("DP") or {}).items():
-        if th.get("ON") == 1:
+        if th.get("ON") == 1 and th.get("LIVE") == 1:
             entities.append(NgbsParentalLockSwitch(coordinator, str(th_id)))
     async_add_entities(entities)
 
