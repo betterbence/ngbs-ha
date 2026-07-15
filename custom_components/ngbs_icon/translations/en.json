@@ -1,0 +1,92 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to NGBS iCON",
+        "description": "Enter the local IP address of the NGBS controller.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the NGBS controller"
+    },
+    "abort": {
+      "already_configured": "This NGBS controller is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "NGBS iCON options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "humidity": {
+        "name": "Humidity"
+      },
+      "dew_point": {
+        "name": "Dew point"
+      },
+      "water_temperature": {
+        "name": "Water temperature"
+      },
+      "outside_temperature": {
+        "name": "Outside temperature"
+      },
+      "uptime": {
+        "name": "Uptime"
+      },
+      "mixing_valve": {
+        "name": "Mixing valve"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      },
+      "valve": {
+        "name": "Valve"
+      },
+      "dew_protection": {
+        "name": "Dew protection"
+      },
+      "frost": {
+        "name": "Frost protection"
+      },
+      "pump": {
+        "name": "Pump"
+      },
+      "overheat": {
+        "name": "Overheat"
+      },
+      "water_frost": {
+        "name": "Water frost protection"
+      }
+    },
+    "switch": {
+      "global_eco": {
+        "name": "Global Eco"
+      },
+      "parental_lock": {
+        "name": "Parental lock"
+      }
+    },
+    "select": {
+      "operating_mode": {
+        "name": "Operating mode",
+        "state": {
+          "heating": "Heating",
+          "cooling": "Cooling"
+        }
+      }
+    }
+  }
+}
