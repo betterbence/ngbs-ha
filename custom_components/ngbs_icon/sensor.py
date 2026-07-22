@@ -21,6 +21,7 @@ class NgbsSensorDescription(SensorEntityDescription):
 
 
 THERMOSTAT_SENSORS = (
+    NgbsSensorDescription(key="temperature", translation_key="temperature", device_class=SensorDeviceClass.TEMPERATURE, native_unit_of_measurement=UnitOfTemperature.CELSIUS, state_class=SensorStateClass.MEASUREMENT, value_fn=lambda th: th.get("TEMP")),
     NgbsSensorDescription(key="humidity", translation_key="humidity", device_class=SensorDeviceClass.HUMIDITY, native_unit_of_measurement=PERCENTAGE, state_class=SensorStateClass.MEASUREMENT, value_fn=lambda th: th.get("RH")),
     NgbsSensorDescription(key="dew_point", translation_key="dew_point", device_class=SensorDeviceClass.TEMPERATURE, native_unit_of_measurement=UnitOfTemperature.CELSIUS, state_class=SensorStateClass.MEASUREMENT, value_fn=lambda th: th.get("DEW")),
 )

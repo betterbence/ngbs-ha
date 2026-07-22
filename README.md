@@ -6,13 +6,13 @@ A local Home Assistant custom integration for NGBS iCON heating/cooling controll
 
 - Automatic SYSID discovery through the config flow
 - One climate entity per enabled thermostat
-- Current temperature and humidity
+- Dedicated temperature sensors plus current temperature and humidity on climate entities
 - Comfort/Eco preset per room
 - Target-temperature control
 - Heat/cool control from the configured master thermostat
 - Global Eco switch
 - Parental-lock switches
-- Humidity and dew-point sensors
+- Humidity and dew-point and temperature sensors
 - Valve, online, frost, and dew-protection binary sensors
 - Controller water/outside temperatures, pump, overheat, uptime, and mixing-valve state
 
@@ -31,4 +31,4 @@ Copy `custom_components/ngbs_icon` into Home Assistant's `custom_components` dir
 
 ## Development status
 
-This is an early `0.1.1` release. Test control operations carefully. The protocol implementation is based on the local NGBS service behavior and the open-source `ngbs-icon` project.
+This is an early `0.1.2` release. Test control operations carefully. The protocol implementation is based on the local NGBS service behavior and the open-source `ngbs-icon` project.
